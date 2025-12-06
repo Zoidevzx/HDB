@@ -1,0 +1,7 @@
+export default function Cake(){
+    return(
+        <div>
+            
+        </div>
+    )
+}

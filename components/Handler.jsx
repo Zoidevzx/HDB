@@ -30,7 +30,8 @@ export default function Handler() {
                 <div className="animate-[fadeIn_0.7s_ease-out]">
                     <Cake icon="🚀"
                         title="Performance"
-                        description="Otimizado para carregar instantaneamente com animações suaves em 60fps." />
+                        description="Otimizado para carregar instantaneamente com animações suaves em 60fps." 
+                    />
                 </div>
             )}
         </div>

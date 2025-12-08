@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@utility flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   background: linear-gradient(135deg, black, red, blue);
 }
+
+

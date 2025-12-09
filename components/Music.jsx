@@ -14,61 +14,98 @@ export default function Music() {
 
     const audioRef = useRef(null)
     const currentIndexRef = useRef(0)
+    const isMutedRef = useRef(false)
     const [isMuted, setIsMuted] = useState(false)
+    const isMountedRef = useRef(true)
 
     useEffect(() => {
+        isMountedRef.current = true;
 
-        currentIndexRef.current = Math.floor(Math.random() * playlist.length)
+        if (!audioRef.current) {
+            audioRef.current = new Audio();
+        }
 
-        const audio = new Audio()
-        audioRef.current = audio
+        const audio = audioRef.current;
 
-        audio.volume = 1.0
+        currentIndexRef.current = Math.floor(Math.random() * playlist.length);
+        audio.volume = 1.0;
+        audio.loop = false;
 
-        audio.loop = false
+        const playTrack = () => {
+            if (!isMountedRef.current || !audio) return;
 
-
-        const playCurrentTrack = () => {
             audio.src = playlist[currentIndexRef.current];
-            audio.muted = isMuted
+            audio.muted = isMutedRef.current;
 
             const playPromise = audio.play();
 
-
             if (playPromise !== undefined) {
-                playPromise.catch(() => {
-                    console.log("Autoplay bloqueado. Aguardando interação.");
-                    setIsMuted(true);
-                    audio.muted = true;
+                playPromise.catch((error) => {
+                    if (error.name !== 'AbortError' && isMountedRef.current) {
+                        console.log("Autoplay bloqueado pelo navegador.");
+                        setIsMuted(true);
+                        isMutedRef.current = true;
+                        audio.muted = true;
+                    }
                 });
             }
         };
 
         const handleTrackEnded = () => {
             currentIndexRef.current = (currentIndexRef.current + 1) % playlist.length;
-            playCurrentTrack();
+            playTrack();
+        };
+
+        const handleVisibilityChange = () => {
+            if (!audio) return;
+
+            if (document.hidden) {
+
+                audio.pause();
+            } else {
+
+                if (!isMutedRef.current) {
+                    const playPromise = audio.play();
+                    if (playPromise !== undefined) {
+                        playPromise.catch(() => { });
+                    }
+                }
+            }
         };
 
         audio.addEventListener('ended', handleTrackEnded);
+        document.addEventListener("visibilitychange", handleVisibilityChange);
 
-        playCurrentTrack();
+        playTrack();
 
         return () => {
+            isMountedRef.current = false;
+
             audio.removeEventListener('ended', handleTrackEnded);
+            document.removeEventListener("visibilitychange", handleVisibilityChange);
+
             audio.pause();
             audio.currentTime = 0;
+            audio.src = "";
+            audio.load();
         };
     }, []);
 
     const toggleMute = () => {
         if (audioRef.current) {
+            const newState = !isMutedRef.current;
 
-            const newState = !audioRef.current.muted;
+            isMutedRef.current = newState;
             audioRef.current.muted = newState;
             setIsMuted(newState);
 
-            if (audioRef.current.paused && !newState) {
-                audioRef.current.play().catch(e => console.log("Ainda bloqueado", e));
+            if (newState) {
+
+            } else {
+
+                if (audioRef.current.paused) {
+                    audioRef.current.play().catch(() => { });
+                }
             }
         }
     };

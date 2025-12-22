@@ -28,10 +28,7 @@ export default function Handler() {
             )}
             {stage === 'hidden' && (
                 <div className="animate-[fadeIn_0.7s_ease-out]">
-                    <Cake icon="🚀"
-                        title="Performance"
-                        description="Otimizado para carregar instantaneamente com animações suaves em 60fps." 
-                    />
+                    <Cake />
                 </div>
             )}
         </div>

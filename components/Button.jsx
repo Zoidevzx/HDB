@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function Button({hiddenButton}) {
+export default function Button({ hiddenButton }) {
 
     const buttonClasses = `
     relative overflow-hidden 
@@ -13,8 +13,7 @@ export default function Button({hiddenButton}) {
     hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]
     hover:-translate-y-1 active:scale-95 transition-all duration-500
     cursor-pointer select-none
-    
-    /* Efeito de brilho (Shine) */
+
     before:absolute before:inset-0 
     before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent
     before:translate-x-[-200%] hover:before:translate-x-[200%] 

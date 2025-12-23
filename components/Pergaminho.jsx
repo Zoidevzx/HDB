@@ -121,7 +121,7 @@ export default function Pergaminho() {
 
                                         <div className="pb-4">
                                             <p className="font-bold text-xs uppercase tracking-[0.3em] text-amber-900/50">Assinado por</p>
-                                            <p className="text-2xl font-cursive text-amber-900 mt-2">Zoide</p>
+                                            <p className="text-2xl font-cursive text-amber-900 mt-2">#####</p>
                                         </div>
                                     </motion.div>
 

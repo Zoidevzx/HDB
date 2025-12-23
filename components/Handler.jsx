@@ -30,7 +30,7 @@ export default function Handler() {
                     </div>
                 )}
                 {stage === 'hidden' && (
-                    <div className="animate-[fadeIn_0.7s_ease-out]">
+                    <div className="relative animate-[fadeIn_0.7s_ease-out]">
                         <Cake />
                     </div>
 

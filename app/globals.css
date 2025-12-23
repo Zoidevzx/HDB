@@ -21,13 +21,19 @@ body {
 
 @media (min-width: 768px) {
   .birthday-cake {
-    transform: scale(1);
+    transform: scale(1.2);
   }
 }
 
 @media (max-width: 500px) {
   .birthday-cake {
-    transform: scale(0.55);
+    transform: scale(0.6);
+  }
+}
+
+@media (min-width: 2150px){
+  .birthday-cake{
+    transform: scale(1.4);
   }
 }
 

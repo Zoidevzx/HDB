@@ -113,10 +113,22 @@ export default function Music() {
     return (
         <button
             onClick={toggleMute}
-            className="fixed cursor-pointer bottom-5 right-5 z-50 p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white shadow-lg transition-all hover:bg-white/20 hover:scale-105 active:scale-95"
+            className="
+        fixed bottom-5 right-5 z-50 
+        flex items-center justify-center 
+        w-12 h-12 md:w-16 md:h-16 2xl:w-20 2xl:h-20
+        rounded-full 
+        bg-white/10 backdrop-blur-md border border-white/20 text-white 
+        shadow-lg transition-all 
+        hover:bg-white/20 hover:scale-110 active:scale-95
+        cursor-pointer
+    "
             aria-label={isMuted ? "Ativar som" : "Silenciar"}
         >
-            {isMuted ? <VolumeX size={24} /> : <Volume2 size={24} />}
+            {isMuted ?
+                <VolumeX className="w-6 h-6 md:w-8 md:h-8 2xl:w-10 2xl:h-10" /> :
+                <Volume2 className="w-6 h-6 md:w-8 md:h-8 2xl:w-10 2xl:h-10" />
+            }
         </button>
     );
 }

@@ -43,7 +43,7 @@ export default function Handler() {
                         initial={{ scale: 0, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         exit={{ scale: 0, opacity: 0 }}
-                        className="fixed bottom-20 right-5 md:bottom-5 md:right-20 z-50"
+                        className="fixed bottom-20 right-5 md:bottom-5 md:right-23 z-50 2xl:right-28"
                     >
                         <Pergaminho />
                     </motion.div>

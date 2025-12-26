@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Pacifico, Fredoka, Montserrat } from 'next/font/google'
+import { Pacifico, Fredoka, Playfair_Display } from 'next/font/google'
 
 const pacifico = Pacifico({ weight: '400', subsets: ['latin'] })
 const fredoka = Fredoka({ subsets: ['latin'] })
-const montserrat = Montserrat({
+const playfair = Playfair_Display({
   subsets: ['latin'],
-  weight: ['800'],
-  variable: '--font-montserrat', 
+  weight: ['400', '600', '700', '800', '900'],
 })
 
 const geistSans = Geist({

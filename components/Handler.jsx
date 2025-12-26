@@ -52,10 +52,10 @@ export default function Handler() {
                             className="relative flex flex-col items-center justify-center"
                         >
                             <div className="separation absolute z-20 flex flex-col items-center justify-center text-center w-max pointer-events-none select-none origin-center -top-80 md:-top-90 2xl:-top-100">
-                                <h1 className="font-['Pacifico'] italic font-medium text-transparent bg-clip-text bg-gradient-to-r from-rose-300 via-orange-200 to-rose-300 drop-shadow-sm tracking-widest text-4xl max-[500px]:text-3xl md:text-4xl 2xl:text-5xl">
+                                <h1 className="font-['Pacifico'] italic font-medium text-transparent bg-clip-text bg-linear-to-r from-rose-300 via-orange-200 to-rose-300 drop-shadow-sm tracking-widest text-4xl max-[500px]:text-3xl md:text-4xl 2xl:text-5xl">
                                     Happy Birthday
                                 </h1>
-                                <h2 className="font-['Fredoka'] font-bold text-transparent bg-clip-text bg-gradient-to-br from-rose-300 via-orange-200 to-rose-300 mt-2 tracking-wide drop-shadow-md transform -rotate-1 text-5xl max-[500px]:text-5xl md:text-5xl 2xl:text-7xl">
+                                <h2 className="font-['Fredoka'] font-bold text-transparent bg-clip-text bg-linear-to-br from-rose-300 via-orange-200 to-rose-300 mt-2 tracking-wide drop-shadow-md transform -rotate-1 text-5xl max-[500px]:text-5xl md:text-5xl 2xl:text-7xl">
                                     {name}
                                 </h2>
                             </div>

@@ -3,7 +3,7 @@
 export default function Button({ hiddenButton }) {
 
     const buttonClasses = `
-    font-['var(--font-montserrat)'] tracking-wide uppercase
+    font-['Playfair_Display'] tracking-wide uppercase
     relative overflow-hidden 
     bg-gradient-to-b from-white to-gray-100 
     text-black font-extrabold rounded-2xl

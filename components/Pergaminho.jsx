@@ -61,7 +61,6 @@ export default function Pergaminho() {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             className="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-auto cursor-pointer"
-                            onClick={handleToggle}
                         />
 
                         <div className="relative w-full max-w-lg flex flex-col items-center pointer-events-auto perspective-1000">

@@ -3,9 +3,10 @@
 export default function Button({ hiddenButton }) {
 
     const buttonClasses = `
+    font-['var(--font-montserrat)'] tracking-wide uppercase
     relative overflow-hidden 
     bg-gradient-to-b from-white to-gray-100 
-    text-black font-bold rounded-2xl
+    text-black font-extrabold rounded-2xl
     border border-gray-200
     shadow-[0_0_20px_rgba(255,255,255,0.2)] 
     hover:shadow-[0_0_40px_rgba(255,255,255,0.5)] 
@@ -23,7 +24,9 @@ export default function Button({ hiddenButton }) {
 
     return (
         <div>
-            <button onClick={hiddenButton} className={buttonClasses}>Clique aqui</button>
+            <button onClick={hiddenButton} className={buttonClasses}>
+                Clique aqui
+            </button>
         </div>
     )
 }

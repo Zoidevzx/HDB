@@ -15,6 +15,8 @@ export default function Pergaminho() {
         <>
             <style dangerouslySetInnerHTML={{
                 __html: `
+                @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=IM+Fell+English:ital@0;1&family=Great+Vibes&display=swap');
+
                 .scrollbar-medieval::-webkit-scrollbar {
                     width: 8px;
                 }
@@ -59,6 +61,7 @@ export default function Pergaminho() {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             className="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-auto cursor-pointer"
+                            onClick={handleToggle}
                         />
 
                         <div className="relative w-full max-w-lg flex flex-col items-center pointer-events-auto perspective-1000">
@@ -91,21 +94,20 @@ export default function Pergaminho() {
                                     borderRight: "2px solid #8b7355",
                                 }}
                             >
-
                                 <div className="absolute top-0 left-4 right-4 bottom-0 border-l border-r border-amber-900/20 pointer-events-none"></div>
 
-                                <div className="py-12 px-8 md:px-12 text-center font-serif text-amber-950 max-h-[60vh] overflow-y-auto scrollbar-medieval">
+                                <div className="py-12 px-8 md:px-12 text-center text-amber-950 max-h-[60vh] overflow-y-auto scrollbar-medieval">
 
                                     <motion.div
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         transition={{ delay: 0.3, duration: 0.5 }}
                                     >
-                                        <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-widest text-amber-900 drop-shadow-sm uppercase" style={{ fontFamily: 'Times New Roman, serif' }}>
+                                        <h2 className="font-['Cinzel_Decorative'] text-3xl md:text-4xl font-bold mb-6 tracking-widest text-amber-900 drop-shadow-sm uppercase">
                                             Antiga Profecia
                                         </h2>
 
-                                        <p className="leading-loose text-lg md:text-xl font-medium text-amber-950/90 italic">
+                                        <p className="font-['IM_Fell_English'] italic leading-loose text-xl md:text-2xl text-amber-950/90">
                                             "Nas profundezas do código, onde os bugs habitam, apenas o desenvolvedor com o coração valente poderá compilar a build final sem erros."
                                         </p>
 
@@ -115,13 +117,16 @@ export default function Pergaminho() {
                                             <div className="h-px w-20 bg-amber-900"></div>
                                         </div>
 
-                                        <p className="leading-relaxed text-base text-amber-900/80 mb-8">
+                                        <p className="font-['IM_Fell_English'] leading-relaxed text-lg text-amber-900/80 mb-8">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo dolore quos?
                                         </p>
 
                                         <div className="pb-4">
                                             <p className="font-bold text-xs uppercase tracking-[0.3em] text-amber-900/50">Assinado por</p>
-                                            <p className="text-2xl font-cursive text-amber-900 mt-2">#####</p>
+
+                                            <p className="font-['Great_Vibes'] text-4xl text-amber-900 mt-2 transform -rotate-2">
+                                                Bruno
+                                            </p>
                                         </div>
                                     </motion.div>
 

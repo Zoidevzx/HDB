@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Music from '@/components/Music'
 import "./globals.css";
+import { Pacifico, Fredoka } from 'next/font/google'
+
+const pacifico = Pacifico({ weight: '400', subsets: ['latin'] })
+const fredoka = Fredoka({ subsets: ['latin'] })
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

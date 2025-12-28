@@ -9,7 +9,7 @@ import Pergaminho from './Pergaminho'
 export default function Handler() {
 
     const [isPartyTime, setIsPartyTime] = useState(false)
-    const name = 'Jeanzinho'
+    const name = 'Mittens'
 
     const handleTroca = () => {
         setIsPartyTime(true)

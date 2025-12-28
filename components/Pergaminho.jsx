@@ -106,10 +106,6 @@ export default function Pergaminho() {
                                             Antiga Profecia
                                         </h2>
 
-                                        <p className="font-['IM_Fell_English'] italic leading-loose text-xl md:text-2xl text-amber-950/90">
-                                            "Nas profundezas do código, onde os bugs habitam, apenas o desenvolvedor com o coração valente poderá compilar a build final sem erros."
-                                        </p>
-
                                         <div className="my-8 flex items-center justify-center gap-3 opacity-50">
                                             <div className="h-px w-20 bg-amber-900"></div>
                                             <div className="text-amber-900 text-xs">♦</div>
@@ -117,14 +113,14 @@ export default function Pergaminho() {
                                         </div>
 
                                         <p className="font-['IM_Fell_English'] leading-relaxed text-lg text-amber-900/80 mb-8">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo dolore quos?
+                                            Feliz aniversário, Mittens. Como você percebeu, eu te fiz um site como um presente extra de aniversário. Achei a ideia interessante e espero que tenha ficado do seu agrado. Quero que você saiba que é uma pessoa muito importante para mim, te considero bastante e, se tivesse a possibilidade, faria mais coisas por você. Acho você uma pessoa bem intrigante, seu gosto por jogos, música e animes é bem interessante. Como deve ter dado para notar, eu fiz o site com base nas perguntas que eu te fiz uma vez. Espero ter ficado fiel aos seus gostos. Coloquei as músicas que você me falou que gostava, só ficou faltando uma que eu não consegui encontrar, perdão por isso. Quero que você saiba que, se algum dia precisar falar sobre algum problema seu e se sentir confortável compartilhando ele comigo, eu estou disponível para te ouvir. Além disso, eu espero que você tenha muito sucesso em tudo que você fizer, agradeço do fundo do coração por você ser minha amiga. Espero que o que eu escrevi tenha ficado bom, queria ter feito algo mais elaborado, mas eu fui escrevendo o que achei que seria bom falar e também eu peço desculpas caso eu tenha dito algo que não deveria, não foi minha intenção. Depois, se possível, manda seu feedback.
                                         </p>
 
                                         <div className="pb-4">
                                             <p className="font-bold text-xs uppercase tracking-[0.3em] text-amber-900/50">Assinado por</p>
 
                                             <p className="font-['Great_Vibes'] text-4xl text-amber-900 mt-2 transform -rotate-2">
-                                                Bruno
+                                                Zoide
                                             </p>
                                         </div>
                                     </motion.div>
